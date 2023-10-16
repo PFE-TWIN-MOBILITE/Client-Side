@@ -9,6 +9,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Navbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
+import { useState } from "react";
+
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
@@ -19,6 +21,7 @@ import bgImage from "assets/img/sidebar-2.jpg";
 import logo from "assets/img/DijonMetropoleLogo.png";
 
 let ps;
+
 
 const switchRoutes = (
   <Switch>
@@ -50,6 +53,7 @@ export default function Admin({ ...rest }) {
   const [color, setColor] = React.useState("blue");
   const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
   const handleImageClick = (image) => {
     setImage(image);
   };
@@ -74,6 +78,10 @@ export default function Admin({ ...rest }) {
       setMobileOpen(false);
     }
   };
+
+
+
+
   // initialize and destroy the PerfectScrollbar plugin
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -96,12 +104,13 @@ export default function Admin({ ...rest }) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logo={logo}
+        logo={logo} 
         image={image}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={color}
-        {...rest}
+         {...rest}
+         
       />
       <div className={classes.mainPanel} ref={mainPanel}>
         <Navbar
@@ -130,3 +139,5 @@ export default function Admin({ ...rest }) {
     </div>
   );
 }
+
+

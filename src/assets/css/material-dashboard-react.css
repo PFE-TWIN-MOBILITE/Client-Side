@@ -509,3 +509,7 @@ footer ul li a:hover {
   letter-spacing: normal !important;
 }
 
+.sidebar-logo {
+  text-align: center;
+  width: 100%; /* Réglez la largeur souhaitée ici */
+}
