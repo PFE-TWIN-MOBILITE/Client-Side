@@ -6,3 +6,14 @@
     border: 1px solid #ccc;
   }
   
+  .custom-cluster-icon {
+    background-color: rgba(255, 0, 0, 0.5); /* Exemple de couleur, vous pouvez changer cette couleur */
+    border: 2px solid #fff; /* Bordure blanche */
+    border-radius: 50%; /* Créer un cercle */
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #000; /* Couleur du texte */
+  }
+  
